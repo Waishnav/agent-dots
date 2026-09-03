@@ -1,0 +1,22 @@
+# Secrets — never commit these
+*.credentials.json
+auth.json
+*-accounts.json
+*-accounts.json.backup
+cli.json
+service.json
+opencode.json
+opencode.jsonc
+**/sessions/
+**/cache/
+**/node_modules/
+**/bin/
+*.sqlite*
+*.sqlite-shm
+*.sqlite-wal
+history.jsonl
+transcription-history.jsonl
+*.log
+*.zip
+**/.system/
+.DS_Store
