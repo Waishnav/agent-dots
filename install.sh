@@ -39,12 +39,25 @@ for pkg in "${SELECTED[@]}"; do
 done
 
 log "Checking for dangling skill/instruction links..."
-BROKEN=$(find "$HOME" -xtype l 2>/dev/null | grep -E 'skills|AGENTS|CLAUDE' || true)
+BROKEN=$(find "$HOME/.agents" "$HOME/.codex/skills" "$HOME/.claude/skills" "$HOME/.config/opencode" "$HOME/.pi" -xtype l 2>/dev/null || true)
 if [[ -n "$BROKEN" ]]; then
     warn "Dangling links found:"
     echo "$BROKEN"
 else
     log "No dangling skill/instruction links."
+fi
+
+# External absolute symlink (stow refuses absolute symlinks, so it lives
+# outside the stowed tree and is managed here).
+OMARCHY_SRC="$HOME/.local/share/omarchy/default/omarchy-skill"
+OMARCHY_DST="$HOME/.claude/skills/omarchy"
+if [[ -e "$OMARCHY_SRC" ]]; then
+    if [[ ! -L "$OMARCHY_DST" ]]; then
+        log "Linking external omarchy skill..."
+        ln -s "$OMARCHY_SRC" "$OMARCHY_DST"
+    fi
+else
+    warn "Omarchy skill source missing: $OMARCHY_SRC"
 fi
 
 log "Done!"

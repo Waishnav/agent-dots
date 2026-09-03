@@ -43,6 +43,12 @@ to fold them back in:
 
 Lockfiles (`.skill-lock.json`) record original install sources.
 
+## External links
+
+`~/.claude/skills/omarchy` points outside the repo (absolute path into
+the omarchy install). Stow refuses absolute symlinks, so it is not part
+of the stowed tree — `install.sh` creates it.
+
 ## Secrets policy
 
 `*opencode.json*`, `auth.json`, `*.credentials.json`, `cli.json`,
