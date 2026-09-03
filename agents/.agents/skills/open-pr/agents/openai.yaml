@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open PR"
+  short_description: "Open concise, human-readable pull requests"
+  default_prompt: "Use $Open-pr to review the branch and open a concise pull request."

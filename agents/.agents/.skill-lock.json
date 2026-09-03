@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "pluginName": "example-skills",
+      "installedAt": "2026-02-10T18:29:57.631Z",
+      "updatedAt": "2026-03-02T22:00:24.894Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-10T18:30:01.323Z",
+      "updatedAt": "2026-02-10T18:30:01.323Z"
+    },
+    "create-mcp-app": {
+      "source": "modelcontextprotocol/ext-apps",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/modelcontextprotocol/ext-apps.git",
+      "skillPath": "plugins/mcp-apps/skills/create-mcp-app/SKILL.md",
+      "skillFolderHash": "860fca4566a2e7cf54e740c2935ec4d0f99f838b",
+      "installedAt": "2026-02-11T14:20:07.565Z",
+      "updatedAt": "2026-02-11T14:20:07.565Z"
+    },
+    "playwriter": {
+      "source": "remorses/playwriter",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/remorses/playwriter.git",
+      "skillPath": "skills/playwriter/SKILL.md",
+      "skillFolderHash": "7dc2e2112461b1c0bd9a761531505ce93e482e35",
+      "installedAt": "2026-02-14T17:50:59.058Z",
+      "updatedAt": "2026-02-14T17:50:59.058Z"
+    },
+    "react-doctor": {
+      "source": "millionco/react-doctor",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/millionco/react-doctor.git",
+      "skillPath": "skills/react-doctor/SKILL.md",
+      "skillFolderHash": "868e96eab2f8e2be1e6069530d34a40a5a8ccbdc",
+      "installedAt": "2026-02-18T06:35:01.778Z",
+      "updatedAt": "2026-02-18T06:35:01.778Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "kilo",
+    "claude-code"
+  ]
+}
