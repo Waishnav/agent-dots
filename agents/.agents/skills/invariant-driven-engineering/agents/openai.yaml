@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invariant-Driven Engineering"
+  short_description: "Build typed systems around explicit invariants"
+  default_prompt: "Use $invariant-driven-engineering to implement this change with typed seams, explicit invariants, and focused tests."

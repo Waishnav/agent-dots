@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cleanup Work"
+  short_description: "Harden and simplify an existing implementation"
+  default_prompt: "Use $cleanup-work to audit and clean up this implementation before merge."
