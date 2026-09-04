@@ -12,9 +12,25 @@ one place; per-agent paths are symlinks to them:
   `agents/.claude/CLAUDE.md` and `agents/.config/opencode/AGENTS.md`
   symlink to it. `agents/AGENTS.md` (stows to `~/AGENTS.md`) is separate
   content (OS/dotfiles policy), not the same file.
-- Skills: `agents/.agents/skills/<name>` is canonical. Per-agent skill dirs
-  (`~/.codex/skills`, `~/.claude/skills`, `~/.config/opencode/skills`,
-  `~/.pi/agent/skills`) symlink each skill back to it.
+- Skills: `agents/.agents/skills/<name>` holds the one real copy of every
+  skill. Each harness symlinks **only the skills it actually uses** —
+  same coverage as before the migration, no cross-exposure:
+  - codex (13): agents-sdk, babysit-pr, cleanup-work, cloudflare,
+    cloudflare-email-service, create-mcp-app, durable-objects,
+    frontend-skill, invariant-driven-engineering, sandbox-sdk, web-perf,
+    workers-best-practices, wrangler
+  - claude (17 + omarchy): agents-sdk, chatgpt-apps, cloudflare,
+    cloudflare-email-service, create-mcp-app, durable-objects,
+    plannotator-* (x6), react-doctor, sandbox-sdk, web-perf,
+    workers-best-practices, wrangler
+  - opencode (9): agents-sdk, cloudflare, cloudflare-email-service,
+    create-mcp-app, durable-objects, sandbox-sdk, web-perf,
+    workers-best-practices, wrangler
+  - pi (10 + own web-perf): agents-sdk, chatgpt-apps,
+    chrome-devtools-pi, cloudflare, cloudflare-email-service,
+    durable-objects, react-doctor, sandbox-sdk, workers-best-practices,
+    wrangler
+  To expose a skill to another harness, add one symlink + commit.
 
 ## Install
 
