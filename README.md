@@ -41,6 +41,20 @@ cd ~/agent-dots
 
 Or one package explicitly: `./install.sh agents`.
 
+## Syncing agent-made changes
+
+Edits to existing files (AGENTS.md, SKILL.md, ...) land in the repo
+automatically — those paths are symlinks. But when an agent *adds* a new
+skill or command under `$HOME`, it lands outside the repo. Fold it back:
+
+```bash
+./sync.sh   # moves additions to canonical layout, restows, reports conflicts
+git status --short   # review, then commit + push
+```
+
+`sync.sh` never touches secrets, caches, sessions, or machine dirs, and
+never commits — that stays your call.
+
 ## Verify
 
 ```bash
