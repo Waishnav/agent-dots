@@ -1,5 +1,5 @@
 ---
-name: open-pr
+name: raise-pr
 description: Use when the user asks to file, open, or create a PR
 ---
 

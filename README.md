@@ -15,10 +15,10 @@ one place; per-agent paths are symlinks to them:
 - Skills: `agents/.agents/skills/<name>` holds the one real copy of every
   skill. Each harness symlinks **only the skills it actually uses** —
   same coverage as before the migration, no cross-exposure:
-  - codex (13): agents-sdk, babysit-pr, cleanup-work, cloudflare,
+  - codex (14): agents-sdk, babysit-pr, cleanup-work, cloudflare,
     cloudflare-email-service, create-mcp-app, durable-objects,
-    frontend-skill, invariant-driven-engineering, sandbox-sdk, web-perf,
-    workers-best-practices, wrangler
+    frontend-skill, invariant-driven-engineering, raise-pr, sandbox-sdk,
+    web-perf, workers-best-practices, wrangler
   - claude (17 + omarchy): agents-sdk, chatgpt-apps, cloudflare,
     cloudflare-email-service, create-mcp-app, durable-objects,
     plannotator-* (x6), react-doctor, sandbox-sdk, web-perf,
